@@ -15,16 +15,16 @@ import { Route as RegisterRouteImport } from './routes/register'
 import { Route as PerfilRouteImport } from './routes/perfil'
 import { Route as OrganizadoresRouteImport } from './routes/organizadores'
 import { Route as NotificacionesRouteImport } from './routes/notificaciones'
-import { Route as NeweventRouteImport } from './routes/newevent'
+import { Route as NewEventRouteImport } from './routes/newEvent'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as HomeRouteImport } from './routes/home'
+import { Route as GenericRouteImport } from './routes/generic'
+import { Route as EventDetailRouteImport } from './routes/eventDetail'
 import { Route as ChatsRouteImport } from './routes/chats'
 import { Route as CalendarioRouteImport } from './routes/calendario'
+import { Route as AcordeRouteImport } from './routes/acorde'
+import { Route as AboutUsRouteImport } from './routes/aboutUs'
 import { Route as AboutRouteImport } from './routes/about'
-import { Route as GenericRouteImport } from './routes/Generic'
-import { Route as EventDetailRouteImport } from './routes/EventDetail'
-import { Route as AcordeRouteImport } from './routes/Acorde'
-import { Route as AboutUsRouteImport } from './routes/AboutUs'
 import { Route as IndexRouteImport } from './routes/index'
 
 const rootRouteImport = createRootRoute()
@@ -54,9 +54,9 @@ const NotificacionesRoute = NotificacionesRouteImport.update({
   path: '/notificaciones',
   getParentRoute: () => rootRouteImport,
 } as any)
-const NeweventRoute = NeweventRouteImport.update({
-  id: '/newevent',
-  path: '/newevent',
+const NewEventRoute = NewEventRouteImport.update({
+  id: '/newEvent',
+  path: '/newEvent',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -69,6 +69,16 @@ const HomeRoute = HomeRouteImport.update({
   path: '/home',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GenericRoute = GenericRouteImport.update({
+  id: '/generic',
+  path: '/generic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventDetailRoute = EventDetailRouteImport.update({
+  id: '/eventDetail',
+  path: '/eventDetail',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ChatsRoute = ChatsRouteImport.update({
   id: '/chats',
   path: '/chats',
@@ -79,29 +89,19 @@ const CalendarioRoute = CalendarioRouteImport.update({
   path: '/calendario',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GenericRoute = GenericRouteImport.update({
-  id: '/Generic',
-  path: '/Generic',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventDetailRoute = EventDetailRouteImport.update({
-  id: '/EventDetail',
-  path: '/EventDetail',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AcordeRoute = AcordeRouteImport.update({
-  id: '/Acorde',
-  path: '/Acorde',
+  id: '/acorde',
+  path: '/acorde',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutUsRoute = AboutUsRouteImport.update({
-  id: '/AboutUs',
-  path: '/AboutUs',
+  id: '/aboutUs',
+  path: '/aboutUs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -112,16 +112,16 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/AboutUs': typeof AboutUsRoute
-  '/Acorde': typeof AcordeRoute
-  '/EventDetail': typeof EventDetailRoute
-  '/Generic': typeof GenericRoute
   '/about': typeof AboutRoute
+  '/aboutUs': typeof AboutUsRoute
+  '/acorde': typeof AcordeRoute
   '/calendario': typeof CalendarioRoute
   '/chats': typeof ChatsRoute
+  '/eventDetail': typeof EventDetailRoute
+  '/generic': typeof GenericRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
-  '/newevent': typeof NeweventRoute
+  '/newEvent': typeof NewEventRoute
   '/notificaciones': typeof NotificacionesRoute
   '/organizadores': typeof OrganizadoresRoute
   '/perfil': typeof PerfilRoute
@@ -130,16 +130,16 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/AboutUs': typeof AboutUsRoute
-  '/Acorde': typeof AcordeRoute
-  '/EventDetail': typeof EventDetailRoute
-  '/Generic': typeof GenericRoute
   '/about': typeof AboutRoute
+  '/aboutUs': typeof AboutUsRoute
+  '/acorde': typeof AcordeRoute
   '/calendario': typeof CalendarioRoute
   '/chats': typeof ChatsRoute
+  '/eventDetail': typeof EventDetailRoute
+  '/generic': typeof GenericRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
-  '/newevent': typeof NeweventRoute
+  '/newEvent': typeof NewEventRoute
   '/notificaciones': typeof NotificacionesRoute
   '/organizadores': typeof OrganizadoresRoute
   '/perfil': typeof PerfilRoute
@@ -149,16 +149,16 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/AboutUs': typeof AboutUsRoute
-  '/Acorde': typeof AcordeRoute
-  '/EventDetail': typeof EventDetailRoute
-  '/Generic': typeof GenericRoute
   '/about': typeof AboutRoute
+  '/aboutUs': typeof AboutUsRoute
+  '/acorde': typeof AcordeRoute
   '/calendario': typeof CalendarioRoute
   '/chats': typeof ChatsRoute
+  '/eventDetail': typeof EventDetailRoute
+  '/generic': typeof GenericRoute
   '/home': typeof HomeRoute
   '/login': typeof LoginRoute
-  '/newevent': typeof NeweventRoute
+  '/newEvent': typeof NewEventRoute
   '/notificaciones': typeof NotificacionesRoute
   '/organizadores': typeof OrganizadoresRoute
   '/perfil': typeof PerfilRoute
@@ -169,16 +169,16 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/AboutUs'
-    | '/Acorde'
-    | '/EventDetail'
-    | '/Generic'
     | '/about'
+    | '/aboutUs'
+    | '/acorde'
     | '/calendario'
     | '/chats'
+    | '/eventDetail'
+    | '/generic'
     | '/home'
     | '/login'
-    | '/newevent'
+    | '/newEvent'
     | '/notificaciones'
     | '/organizadores'
     | '/perfil'
@@ -187,16 +187,16 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/AboutUs'
-    | '/Acorde'
-    | '/EventDetail'
-    | '/Generic'
     | '/about'
+    | '/aboutUs'
+    | '/acorde'
     | '/calendario'
     | '/chats'
+    | '/eventDetail'
+    | '/generic'
     | '/home'
     | '/login'
-    | '/newevent'
+    | '/newEvent'
     | '/notificaciones'
     | '/organizadores'
     | '/perfil'
@@ -205,16 +205,16 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/AboutUs'
-    | '/Acorde'
-    | '/EventDetail'
-    | '/Generic'
     | '/about'
+    | '/aboutUs'
+    | '/acorde'
     | '/calendario'
     | '/chats'
+    | '/eventDetail'
+    | '/generic'
     | '/home'
     | '/login'
-    | '/newevent'
+    | '/newEvent'
     | '/notificaciones'
     | '/organizadores'
     | '/perfil'
@@ -224,16 +224,16 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   AboutUsRoute: typeof AboutUsRoute
   AcordeRoute: typeof AcordeRoute
-  EventDetailRoute: typeof EventDetailRoute
-  GenericRoute: typeof GenericRoute
-  AboutRoute: typeof AboutRoute
   CalendarioRoute: typeof CalendarioRoute
   ChatsRoute: typeof ChatsRoute
+  EventDetailRoute: typeof EventDetailRoute
+  GenericRoute: typeof GenericRoute
   HomeRoute: typeof HomeRoute
   LoginRoute: typeof LoginRoute
-  NeweventRoute: typeof NeweventRoute
+  NewEventRoute: typeof NewEventRoute
   NotificacionesRoute: typeof NotificacionesRoute
   OrganizadoresRoute: typeof OrganizadoresRoute
   PerfilRoute: typeof PerfilRoute
@@ -278,11 +278,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NotificacionesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/newevent': {
-      id: '/newevent'
-      path: '/newevent'
-      fullPath: '/newevent'
-      preLoaderRoute: typeof NeweventRouteImport
+    '/newEvent': {
+      id: '/newEvent'
+      path: '/newEvent'
+      fullPath: '/newEvent'
+      preLoaderRoute: typeof NewEventRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -299,6 +299,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HomeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/generic': {
+      id: '/generic'
+      path: '/generic'
+      fullPath: '/generic'
+      preLoaderRoute: typeof GenericRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eventDetail': {
+      id: '/eventDetail'
+      path: '/eventDetail'
+      fullPath: '/eventDetail'
+      preLoaderRoute: typeof EventDetailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/chats': {
       id: '/chats'
       path: '/chats'
@@ -313,39 +327,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalendarioRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acorde': {
+      id: '/acorde'
+      path: '/acorde'
+      fullPath: '/acorde'
+      preLoaderRoute: typeof AcordeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aboutUs': {
+      id: '/aboutUs'
+      path: '/aboutUs'
+      fullPath: '/aboutUs'
+      preLoaderRoute: typeof AboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Generic': {
-      id: '/Generic'
-      path: '/Generic'
-      fullPath: '/Generic'
-      preLoaderRoute: typeof GenericRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/EventDetail': {
-      id: '/EventDetail'
-      path: '/EventDetail'
-      fullPath: '/EventDetail'
-      preLoaderRoute: typeof EventDetailRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/Acorde': {
-      id: '/Acorde'
-      path: '/Acorde'
-      fullPath: '/Acorde'
-      preLoaderRoute: typeof AcordeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/AboutUs': {
-      id: '/AboutUs'
-      path: '/AboutUs'
-      fullPath: '/AboutUs'
-      preLoaderRoute: typeof AboutUsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -360,16 +360,16 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   AboutUsRoute: AboutUsRoute,
   AcordeRoute: AcordeRoute,
-  EventDetailRoute: EventDetailRoute,
-  GenericRoute: GenericRoute,
-  AboutRoute: AboutRoute,
   CalendarioRoute: CalendarioRoute,
   ChatsRoute: ChatsRoute,
+  EventDetailRoute: EventDetailRoute,
+  GenericRoute: GenericRoute,
   HomeRoute: HomeRoute,
   LoginRoute: LoginRoute,
-  NeweventRoute: NeweventRoute,
+  NewEventRoute: NewEventRoute,
   NotificacionesRoute: NotificacionesRoute,
   OrganizadoresRoute: OrganizadoresRoute,
   PerfilRoute: PerfilRoute,

@@ -7,6 +7,8 @@ import TextInput from '../common/TextInput';
 import LogoAcorde from '../common/LogoAcorde';
 import LetrasAcorde from '../common/LetrasAcorde';
 
+//En esta pagina quedan residuo de mi intento de apliacasion de la base de datos y incorporar laravel blazer (esto fue un evinte intento guiado por IA)
+
 export default function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,8 +21,8 @@ export default function RegisterPage() {
     <div className="flex max-w-screen h-screen items-center justify-center bg-[#F1EEF9]">
       <div className="max-w-screen-xl max-h-screen">
         <div className="text-center mb-20">
-          <LogoAcorde style="mx-auto my-auto max-w-60 max-h-60 mb-4" src="/images/LogoAcordeAzul.png" /> {/* Ruta ajustada para public/images */}
-          <LetrasAcorde style="text-3xl font-bold text-primary-dark" text="Registrarse" /> {/* Usando primary-dark */}
+          <LogoAcorde style="mx-auto my-auto max-w-60 max-h-60 mb-4" src="/images/LogoAcordeAzul.png" /> 
+          <LetrasAcorde style="text-3xl font-bold text-primary-dark" text="Registrarse" /> 
         </div>
         <div>
           <form>

@@ -6,11 +6,10 @@ export default function ProfileContent() {
   const navigate = useNavigate();
 
  const handleGeneric = () => {
-    // Redirige al usuario a la página de Generic
-    navigate({ to: '/Generic' });
+    
+    navigate({ to: '/generic' });
   };
   const handleHome = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/home' });
   };
 
@@ -37,31 +36,30 @@ export default function ProfileContent() {
         </div>
 
         <div className="space-y-4">
-            {/* Usando el componente Button */}
             <Button
               text="Información personal"
               style="w-full bg-[#A38D6D] hover:bg-amber-500  text-white py-3 rounded-full shadow-md"
-              onClick={handleGeneric} // Aquí se redirige a la página de Generic
+              onClick={handleGeneric} 
             />
             <Button
               text="Información de contacto"
               style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
-              onClick={handleGeneric} // Aquí se redirige a la página de Generic
+              onClick={handleGeneric} 
             />
             <Button
               text="Logros"
               style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
-              onClick={handleGeneric} // Aquí se redirige a la página de Generic
+              onClick={handleGeneric} 
             />
             <Button
               text="Cambios de contraseña"
               style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
-              onClick={handleGeneric} // Aquí se redirige a la página de Generic
+              onClick={handleGeneric} 
             />
             <Button
               text="Soporte"
               style="w-full bg-[#A38D6D] hover:bg-amber-500 text-white py-3 rounded-full shadow-md"
-              onClick={handleGeneric} // Aquí se redirige a la página de Generic
+              onClick={handleGeneric} 
             />
         </div>
          <Card className="p- text-center">

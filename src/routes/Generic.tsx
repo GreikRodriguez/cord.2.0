@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import GenericInfPage from '../components/pages/GenericInfPage'
 
-export const Route = createFileRoute('/Generic')({
+export const Route = createFileRoute('/generic')({
   component: RouteComponent,
 })
 

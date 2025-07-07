@@ -4,23 +4,23 @@ import Button from '../common/Button';
 import Card from '../common/Card';
 
 export default function EventDetailsPage() {
-  const navigate = useNavigate(); // Hook para obtener la función de navegación
+  const navigate = useNavigate(); 
 
   const handleHome = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/home' });
   };
 
   const handleEditEvent = () => {
     console.log('Botón Editar Evento clickeado');
   };
+  
 
   const handleDeleteEvent = () => {
     console.log('Botón Eliminar Evento clickeado');
     if (window.confirm('¿Estás seguro de que deseas eliminar este evento?')) {
       alert('Evento eliminado (simulado)');
       
-    }
+    } //Pedi eventos simples a la IA para simular funcionalidad. 
   };
 
   return (
@@ -59,11 +59,10 @@ export default function EventDetailsPage() {
             <strong className="font-semibold">Tipo de evento:</strong> tipo
           </p>
 
-          {/* Botón "Ver amigos que asistieron" */}
           <div className="flex items-center space-x-2 mb-6">
-            <div className="w-6 h-6 rounded-full bg-blue-300"></div> {/* Placeholder para avatar */}
-            <div className="w-6 h-6 rounded-full bg-yellow-300"></div> {/* Placeholder para avatar */}
-            <div className="w-6 h-6 rounded-full bg-green-300"></div> {/* Placeholder para avatar */}
+            <div className="w-6 h-6 rounded-full bg-blue-300"></div>
+            <div className="w-6 h-6 rounded-full bg-yellow-300"></div> 
+            <div className="w-6 h-6 rounded-full bg-green-300"></div>
             <Button
               text="Ver amigos que asistieron"
               style="bg-gray-200 text-gray-700 text-sm font-semibold py-1 px-3 rounded-full hover:bg-gray-300"
@@ -71,17 +70,16 @@ export default function EventDetailsPage() {
             />
           </div>
 
-          {/* Descripción */}
+        
           <h3 className="text-primary-dark font-semibold mb-2">Descripción</h3>
           <p className="text-gray-700 text-sm mb-6">
             Aquí se mostrará la descripción del evento y una pequeña explicación de los objetivos del mismo y por ejemplo a quienes está destinado, etc.
           </p>
 
-          {/* Detalles de Ingreso */}
+      
           <h3 className="text-primary-dark font-semibold mb-2">Detalles de Ingreso</h3>
           <p className="text-gray-700 text-sm mb-6">(Gratuito o precio)</p>
 
-          {/* Fecha y hora */}
           <h3 className="text-primary-dark font-semibold mb-2">De nuevo la fecha y la hora</h3>
           <div className="flex justify-between space-x-4 mt-4">
             <Button

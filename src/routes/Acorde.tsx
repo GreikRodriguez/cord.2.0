@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import AcordePage from '../components/pages/AcordePage'
 
-export const Route = createFileRoute('/Acorde')({
+export const Route = createFileRoute('/acorde')({
   component: RouteComponent,
 })
 

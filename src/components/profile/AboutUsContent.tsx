@@ -1,5 +1,5 @@
-import Button from '../common/Button'; // Importa el componente Button
-import Card from '../common/Card'; // Importa el componente Card
+import Button from '../common/Button';
+import Card from '../common/Card';
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -17,14 +17,13 @@ export default function AboutUsContent() {
 
 
   return (
-      // El contenedor principal con el fondo marrón claro del diseño
+
     <div className="min-h-screen bg-[#B99F7B] p-4 flex flex-col items-center">
       <div className="text-center mb-8 mt-12"> 
            <LogoAcorde style="mx-auto my-auto max-w-60 max-h-60 mb-4" src="src/assets/imgs/LogoAcordeAzul.png"/>
           <p className="text-2xl font-bold text-primary-dark">ACORDE</p>
       </div>
 
-      {/* Texto genérico sobre la empresa */}
       <div className="text-center text-primary-dark max-w-sm mx-auto mb-8">
           <p className="text-lg font-semibold mb-4">¡Bienvenido a ACORDE!</p>
           <p className="text-sm leading-relaxed">
@@ -36,7 +35,7 @@ export default function AboutUsContent() {
           </p>
       </div>
 
-      {/* Contenedor reducido para iconos de redes sociales */}
+
       <Card className="bg-white p-4 rounded-lg shadow-md flex justify-around items-center space-x-4 w-64 mb-16">
           <FaFacebook className="w-8 h-8 text-gray-700" />
           <FaYoutube className="w-8 h-8 text-gray-700" />

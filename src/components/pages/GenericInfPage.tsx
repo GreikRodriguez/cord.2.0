@@ -6,19 +6,18 @@ import TextInput from '../common/TextInput';
 import { useNavigate } from '@tanstack/react-router';
 
 export default function GenericInfPage() {
-  // Estados para los campos de contraseña (aunque no tendremos lógica de validación real por ahora)
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmNewPassword, setConfirmNewPassword] = useState('');
 
-  // Simulación de función de cambio de contraseña
+  // Simulación de función de cambio de contraseña (IA)
   const handleChangePassword = () => {
     console.log("Intentando cambiar contraseña...");
     console.log("Contraseña actual:", currentPassword);
     console.log("Nueva contraseña:", newPassword);
     console.log("Confirmar nueva contraseña:", confirmNewPassword);
 
-    // Aquí iría la lógica real de validación y cambio de contraseña
+   
     alert("Función de cambio de contraseña simulada.");
     setCurrentPassword('');
     setNewPassword('');
@@ -28,18 +27,17 @@ export default function GenericInfPage() {
   const handleCallGod = () => {
     alert("¡Llamando a Dios para soporte técnico!");
   };
+
   const navigate = useNavigate();
   const handlePerfil = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/perfil' });
   };
 
 
   return (
     <PageLayout>
-      <div className="p-4 space-y-6"> {/* Añadido space-y-6 para separar las secciones */}
+      <div className="p-4 space-y-6">
 
-        {/* Sección: Información Personal */}
         <Card className="p-6">
           <h2 className="text-primary-dark text-xl font-semibold mb-4">Información Personal</h2>
           <div className="space-y-3 text-gray-700">
@@ -51,7 +49,6 @@ export default function GenericInfPage() {
           </div>
         </Card>
 
-        {/* Sección: Información de Contacto */}
         <Card className="p-6">
           <h2 className="text-primary-dark text-xl font-semibold mb-4">Información de Contacto</h2>
           <div className="space-y-3 text-gray-700">
@@ -62,7 +59,7 @@ export default function GenericInfPage() {
           </div>
         </Card>
 
-        {/* Sección: Logros */}
+   
         <Card className="p-6">
           <h2 className="text-primary-dark text-xl font-semibold mb-4">Mis Logros</h2>
           <ul className="list-disc pl-5 text-gray-700 space-y-1">
@@ -78,7 +75,6 @@ export default function GenericInfPage() {
           </ul>
         </Card>
 
-        {/* Sección: Cambiar Contraseña */}
         <Card className="p-6">
           <h2 className="text-primary-dark text-xl font-semibold mb-4">Cambiar Contraseña</h2>
           <div className="space-y-4">
@@ -114,7 +110,7 @@ export default function GenericInfPage() {
           </div>
         </Card>
 
-        {/* Sección: Soporte */}
+    
         <Card className="p- text-center">
           <h2 className="text-primary-dark text-xl font-semibold mb-4">Soporte</h2>
           <TextInput
@@ -123,7 +119,7 @@ export default function GenericInfPage() {
             inputType="text"
             placeholder="Si algo falla toca llamar a Dios"
             style="mb-4"
-            //readOnly={true} // Opcional: para que no se pueda escribir
+         
             />
           <Button
             text="Llamar a Miranda"

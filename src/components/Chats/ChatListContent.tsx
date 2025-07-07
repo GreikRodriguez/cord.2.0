@@ -23,7 +23,6 @@ export default function ChatListContent(props: ChatListContentProps) {
             />
         </div>
         <div className="space-y-3">
-            {/* Placeholder para los ítems de chat, usando Card */}
             <Card className="h-20 flex items-center justify-center text-gray-500">Item de Chat 1</Card>
             <Card className="h-20 flex items-center justify-center text-gray-500">Item de Chat 2</Card>
             <Card className="h-20 flex items-center justify-center text-gray-500">Item de Chat 3</Card>

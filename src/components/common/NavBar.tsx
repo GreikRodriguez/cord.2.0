@@ -1,7 +1,7 @@
 import Button from './Button'; // Importa tu componente Button
 
 interface NavBarProps {
-  onMenuClick?: () => void; // Callback para cuando se haga click en el botón Menú
+  onMenuClick?: () => void; 
 }
 
 export default function NavBar(props: NavBarProps) {
@@ -10,7 +10,7 @@ export default function NavBar(props: NavBarProps) {
       <Button
         text="Menú"
         style="text-white text-lg font-semibold bg-accent-brown rounded-full px-4 py-2"
-        onClick={props.onMenuClick} // Asigna el callback
+        onClick={props.onMenuClick} 
       />
     </div>
   );

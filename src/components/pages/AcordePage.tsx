@@ -8,7 +8,6 @@ export default function AcordePage() {
     const navigate = useNavigate();
 
   const handleLogIn = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/login' });
   };
 

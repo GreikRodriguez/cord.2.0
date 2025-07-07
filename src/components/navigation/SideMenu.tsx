@@ -15,43 +15,35 @@ export default function SideMenu(props: SideMenuProps) {
 const navigate = useNavigate();
 
 const handlePerfil = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/perfil' });
   };
 
   const handleChats = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/chats' });
   };
 
   const handleCalendario = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/calendario' });
   };
 
   const handleOrganizadores = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/organizadores' });
   };
 
   const handleNotificaciones = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/notificaciones' });
   };
 
   const handleSoporte = () => {
-    // Redirige al usuario a la página de registro
     navigate({ to: '/soporte' });
   }
 
   const handleCerrarSesion = () => {
-    // Redirige al usuario a la página de Acorde
-    navigate({ to: '/Acorde' });
+    navigate({ to: '/acorde' });
   };
 
   const handleAboutUs = () => {
-    // Redirige al usuario a la página de AboutUs
-    navigate({ to: '/AboutUs' });
+    navigate({ to: '/aboutUs' });
   }
 
   // Clases para controlar la visibilidad y animación del menú
@@ -70,7 +62,7 @@ const handlePerfil = () => {
                   <div className="w-auto h-auto bg-blue-900 text-white text-xl font-bold rounded-md flex items-center justify-center">DarkMode</div>
                   <Button
                     text="X"
-                    style="text-white text-xl font-bold bg-transparent p-0" // Estilo específico para la X
+                    style="text-white text-xl font-bold bg-transparent p-0"
                     onClick={props.onClose}
                   />
               </div>

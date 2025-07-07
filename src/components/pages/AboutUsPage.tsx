@@ -1,5 +1,5 @@
-import PageLayout from '../layouts/PageLayout'; // Importa el layout
-import AboutUsContent from '../profile/AboutUsContent'; // Importa el nuevo componente de contenido
+import PageLayout from '../layouts/PageLayout'; 
+import AboutUsContent from '../profile/AboutUsContent'; 
 
 export default function AboutUsPage() {
   return (

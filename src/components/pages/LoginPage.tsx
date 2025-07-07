@@ -41,8 +41,8 @@ export default function LoginPage() {
     <div className="flex max-w-screen h-screen items-center justify-center bg-[#F1EEF9]">
       <div className="max-w-screen-xl max-h-screen">
         <div className="text-center mb-20">
-          <LogoAcorde style="mx-auto my-auto max-w-60 max-h-60 mb-4" src="/images/LogoAcordeAzul.png" />
-          <LetrasAcorde style="text-3xl font-bold text-primary-dark" text="Bienvenido" />
+           <LogoAcorde style="mx-auto my-auto max-w-60 max-h-60 mb-4" src="src/assets/imgs/LogoAcordeAzul.png"/>
+           <LetrasAcorde style="text-4xl font-bold text-[#2C558D]" text="Bienvenido"/>
         </div>
         <div>
           <form onSubmit={handleLogin}>
@@ -77,12 +77,12 @@ export default function LoginPage() {
                 text="Iniciar Sesión"
                 style="w-full bg-accent-brown hover:bg-[#E4C581] text-zinc-800 hover:text-zinc-600 font-bold py-3 rounded-lg text-lg mb-6"
               />
-              {/*<Link to="/register" className="inline-block align-baseline font-bold text-sm text-primary-dark hover:text-accent-brown">
+              <Link to="/register" className="inline-block align-baseline font-bold text-sm text-primary-dark hover:text-accent-brown">
                 ¿No tienes una cuenta? Regístrate
               </Link>
               <Link to="#" className="inline-block align-baseline font-bold text-sm text-primary-dark hover:text-accent-brown mt-2">
                 ¿Olvidaste tu contraseña?
-              </Link>}*/}
+              </Link>
             </div>
           </form>
         </div>
